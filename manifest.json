@@ -1,0 +1,20 @@
+{
+  "manifest_version": 1,
+  "version": "1.0.0",
+  "short_name": "App Troncatrice",
+  "name": "App di Calcolo Troncatrice",
+  "description": "App che calcola alcune variabili per una troncatrice",
+  "icons": [
+    {
+      "src": "fg-logo.sq",
+      "sizes": "295x295",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "lang": "it-IT",
+  "background_color": "#1E3A8A",
+  "theme_color": "#1E3A8A",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}
