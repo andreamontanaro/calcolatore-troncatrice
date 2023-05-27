@@ -17,7 +17,7 @@ const InputForm: React.FC<InputFormProps> = ({ label, ...props }) => {
     if (props.onBlur) props.onBlur(e);
   };
 
-  const classes = `relative w-full border rounded-md px-3 py-2 bg-transparent focus:outline-none focus:border-blue-500 transition-all duration-200 ease-in-out ${
+  const classes = `relative w-full border rounded-md px-3 py-2 bg-transparent focus:outline-none focus:border-green-500 transition-all duration-200 ease-in-out ${
     active ? "pt-5" : ""
   }`;
 

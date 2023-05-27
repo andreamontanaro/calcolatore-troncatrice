@@ -10,8 +10,8 @@ type NewCalculationFormProps = {
 export default function NewCalculationForm({ onAdd }: NewCalculationFormProps) {
   const [data, setData] = useState<CalculationFormData>({
     name: "",
-    growth: 0,
-    totalPieces: 0,
+    growth: undefined,
+    totalPieces: undefined,
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +23,10 @@ export default function NewCalculationForm({ onAdd }: NewCalculationFormProps) {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!data.growth || !data.totalPieces) {
+      alert("Devi inserire dei valori validi");
+      return;
+    }
     if (data.growth > 0 && data.totalPieces > 0) {
       onAdd(data);
       setData({ name: "", growth: 0, totalPieces: 0 });

@@ -23,7 +23,12 @@ export function useCalculation() {
     dispatch({ type: "onPending", payload: true });
     try {
       const newItem = CalculationApi.create(data);
-      dispatch({ type: "onAddCalculation", payload: newItem });
+      if (newItem) dispatch({ type: "onAddCalculation", payload: newItem });
+      else
+        dispatch({
+          type: "onError",
+          payload: `Error occurred during calculation creation.`,
+        });
     } catch (exc) {
       dispatch({
         type: "onError",
@@ -49,8 +54,6 @@ export function useCalculation() {
       });
     }
   }
-
-  
 
   return {
     state,

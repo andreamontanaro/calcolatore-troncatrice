@@ -22,6 +22,11 @@ export function get(id: string) {
 }
 
 export function create(data: CalculationFormData) {
+
+  if(!data.growth || !data.totalPieces) {
+    return;
+  }
+
   const beatsPerBar = BAR_LENGTH / data.growth;
   const totalBars = data.totalPieces / beatsPerBar;
   const excessBeats = totalBars / 4;

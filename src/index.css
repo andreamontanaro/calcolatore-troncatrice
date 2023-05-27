@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 * {
-    font-family: "Rubik", sans-serif
+    font-family: "Rubik", sans-serif;
+    color: white;
+    
 }
 
 html {
-    @apply bg-gradient-to-br from-blue-950 to-blue-800 h-full text-white
+    
+    background-image: url('bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
   
